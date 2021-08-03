@@ -1,4 +1,4 @@
-# dockysh
+# Dockysh
 A "wrapper" shell written in Python over **Docker Shell**. 
 **Dockysh** try to speedup the typing of commands for Docker shell reducing the verbosity of command and in some cases providing a little of interactivity.
 
