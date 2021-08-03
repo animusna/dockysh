@@ -6,7 +6,16 @@ A "wrapper" shell written in Python over **Docker Shell**.
 Dockysh does not replace Docker Shell but it's based on it. Dockysh use the **Python library** **[cmd](https://docs.python.org/3/library/cmd.html 'Python Cmd Library')** and little of **Bash** scripting to make easier and more user friendly some commands.
 
 # Why this shell
-For people that make an intense and interactive use of Docker shell **Dockysh** permit you to avoid to repeat some keywords like *docker container*, *docker images* and so on. For istance instead of type *docker container ls* you can type `you@Dokysh$ lsc`and if you want filter the results you can type the command `you@Dokysh$ lsc your_string_filter`.
+For people that make an intense and interactive use of Docker shell **Dockysh** permit you to avoid to repeat some keywords like *docker container*, *docker images* and so on. For istance instead of type *docker container ls* you can type 
+```
+you@Dokysh$ lsc
+```
+
+and if you want filter the results you can type the command 
+
+```
+you@Dokysh$ lsc your_string_filter
+```
 
 # What you need to run this shell
 To run this shell you need:
