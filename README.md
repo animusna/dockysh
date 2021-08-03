@@ -38,7 +38,7 @@ Following some examples of **Dockysh** commands.
 Finding an image: `you@Dokysh$ lsi alpine` where *alpine* is a filter and return all Alpine images like shown following
 
 ```
-you@Dokysh$ lsi
+you@Dokysh$ lsi alpine
 REPOSITORY                                  TAG                              IMAGE ID       CREATED         SIZE
 alpine                                      latest                           d4ff818577bc   6 weeks ago     6.4MB
 ```
