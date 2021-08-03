@@ -100,7 +100,7 @@ class Dockysh(Cmd):
             print("Id not provided!")
 
     def do_rmc(self,arg):
-        cmd=['docker', 'container', 'ls', '--format', "{{.ID}}${{.Image}}${{.Status}}${{.Command}}"]
+        cmd=['docker', 'container', 'ls', '--format', "{{.ID}}\\t{{.Image}}\\t{{.Status}}\\t{{.Command}}"]
         p1 = subprocess.Popen(cmd, stdout=subprocess.PIPE)
 
         containers=p1.stdout.read().decode()
@@ -109,15 +109,14 @@ class Dockysh(Cmd):
             containers=self.__filter(containers.splitlines(),arg)
         else:
             containers=containers.splitlines()
-
+        
         if not containers:
             print("No results found!")
         else:
             print("\nFound {cntrs} containers in base your filter '{filter}'. Please confirm the deletion of the containers found.".format(cntrs=len(containers),filter=arg))
             for container in containers:
                 
-                info=container.split("$")
-                print(f'{container}==>{len(info)}')
+                info=container.split("\t")                
                 answer=input(f'\nDo you want eliminate the container with id "{info[0]}" based on image with ID "{info[1]}" ?\n([Y]=> yes/ [N]=>no / [E]=> exit from this operation): ')
 
                 if answer.lower() == "y":
