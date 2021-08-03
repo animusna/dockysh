@@ -1,5 +1,6 @@
 # dockysh
-A "wrapper" shell written in Python over **Docker Shell**. **Dockysh** try to speedup the typing of commands for Docker shell.
+A "wrapper" shell written in Python over **Docker Shell**. 
+**Dockysh** try to speedup the typing of commands for Docker shell reducing the verbosity of command and in some cases providing a little of interactivity.
 
 # Disclaimer
 Dockysh does not replace Docker Shell but it's based on it. Dockysh use the **Python library** **[cmd](https://docs.python.org/3/library/cmd.html 'Python Cmd Library')** and little of **Bash** scripting to make easier and more user friendly some commands.
@@ -16,7 +17,7 @@ To run this shell you need:
 For who want use this shell in *Windows* you can activate the *[Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/install-win10 'Install WSL')*
 
 # How this shell works
-The shell is provided with a set of commands. Each command is just an alias to a specific **Docker Shell** command. Each alias command is translated and sent to **Docker Shell**. In case of command not mapped the shell try to run the command in **Docker shell**, so if you type the wrong command *command_not_mapped* the shell try to run **docker command_not_mapped**. As logical consequence you can run  each **Docker shell command** without the prefix *docker*.
+The shell is provided with a set of commands. Each command is just an alias to a specific **Docker Shell** command. Each alias command is translated and sent to **Docker Shell**. In case of command not mapped the shell try to run the command in **Docker shell**, so if you type the wrong command *command_not_mapped with_args* the shell try to run **docker command_not_mapped with_args**. As logical consequence you can run  each **Docker shell command** without the prefix *docker*.
 
 # How to run the shell
 Just run the following command: `python dockysh.py` and then type *?* or *help* for help:`you@Dokysh$ help`
