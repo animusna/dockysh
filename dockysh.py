@@ -223,7 +223,7 @@ class Dockysh(Cmd):
     shellVersion ="0.0.1"
     # Header configuration
     border='\n**********************************************************************\n'
-    title="Welcome to the Dockysh a friendly wrapper to Docker shell."
+    title="Welcome to the Dockysh ""a friendly wrapper to Docker shell""."
     subTitle ='                 Type help or ? to list commands.'
     # Python library Command configuration
     do_EOF = do_exit
