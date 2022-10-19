@@ -131,6 +131,16 @@ class Dockysh(Cmd):
                     print(f'Container "{info[0]}" not removed!\n')
 
     def do_sh(self,arg):
+        sh="/bin/sh"
+        id = ""
+        if arg:
+            id=arg
+        else:
+            id = input("Please tell me the container id: ")
+        
+        os.system("docker exec -it " + id + " " + sh)
+
+    def do_bash(self,arg):
         sh="/bin/bash"
         id = ""
         if arg:
@@ -176,6 +186,8 @@ class Dockysh(Cmd):
 #endregion
 
 #region Help methods
+    def help_bash(self):                
+        print('usage: sh [container id]\nRun a Bourne Again SHell (bash) on Linux container.')     
     def help_clear(self):
         print('Clear the screen')        
     def help_c(self):
@@ -195,7 +207,7 @@ class Dockysh(Cmd):
     def help_rmi(self):
         print('usage: rmi [filter]\nRun an interactive deletion of all images corresponding the filter provided.')            
     def help_sh(self):                
-        print('usage: sh [container id]\nRun a bash shell on Linux container.')     
+        print('usage: sh [container id]\nRun a original Bourne shell (sh) on Linux container.')     
     def help_shellver(self):
         print('Get the version of Dockysh')    
     def help_start(self):
